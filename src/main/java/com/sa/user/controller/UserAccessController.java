@@ -27,7 +27,10 @@ public class UserAccessController {
 	@PostMapping("/user/login/currentuser")
 	public UserAccessReturnObject loginUser (@RequestBody Student student) {
 		
-		return userService.loginUser(student);
+		UserAccessReturnObject  userStudent = userService.loginUser(student);
+		return userStudent;
+		
+		//return userService.loginUser(student);
 		
 	}
 
