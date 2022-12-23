@@ -5,16 +5,19 @@ server:
 #tells about the Eureka server details and its refresh time 
 eureka:     
   instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
-    #prefer-ip-address: true 
-  client:
+    #leaseRenewalIntervalInSeconds: 1
+    #leaseExpirationDurationInSeconds: 2
+    preferIpAddress: true 
+  #client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
+      # localhost
+        defaultZone: http://localhost:8761/eureka/
+      # docker
+      # defaultZone: http://sa-discovery:8761/eureka/
+   # healthcheck:
+    #  enabled: true
+    #lease:
+    #  duration: 5
 
 spring:   
   application:
