@@ -2,8 +2,8 @@
 
 <configuration>
 
-   <!--  <property name="LOG_PATH" value="./log/sa-user.log"/> -->
-   <!-- 		<property name="LOG_PATH" value="c:/temp/sa-user.log"/> -->
+      <property name="LOG_PATH" value="./log/sa-user.log"/> 
+   <!--  		<property name="LOG_PATH" value="c:/temp/sa-user.log"/>-->
 
     <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH}</file>
